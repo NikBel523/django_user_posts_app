@@ -146,3 +146,5 @@ dmypy.json
 .mypy_cache
 
 .ignore_test
+
+media/
