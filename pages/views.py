@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from pages.models import Post
+
+
+class PostListView(ListView):
+    """Представление для списка постов."""
+
+    model = Post
+    template_name = 'posts.html'
+    context_object_name = 'posts'
