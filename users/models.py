@@ -21,7 +21,8 @@ class MetroUser(AbstractUser):
         verbose_name='фото',
         upload_to='avatars/',
         null=True,
-        default=None
+        blank=True,
+        default=None,
     )
     address = models.CharField(verbose_name='адрес', max_length=100)
 
