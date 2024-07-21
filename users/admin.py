@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import Group
 
 from .models import MetroUser
 
@@ -31,3 +32,6 @@ class MetroUserAdmin(UserAdmin):
         'email',
         'full_name',
     )
+
+
+admin.site.unregister(Group)
