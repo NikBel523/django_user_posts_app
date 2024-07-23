@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}
+  Главная
+{% endblock %}
+{% block content %}
+  <style>
+    .profile-container {
+      display: flex;
+      align-items: center;
+    }
+    .profile-avatar {
+      flex-shrink: 0;
+      margin-right: 20px;
+      text-align: center;
+    }
+    .profile-avatar img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  </style>
+  <div class="profile-container">
+    <div class="profile-avatar">
+      <img src="{{ profile.avatar }}" alt="Avatar">
+      <p>фото</p>
+    </div>
+    <div class="profile-name">
+      <p>ФИО: {{ profile.full_name }}</p>
+    </div>
+  </div>
+{% endblock %}
