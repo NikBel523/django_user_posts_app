@@ -1,0 +1,23 @@
+[
+    {
+        "username": "admin1",
+        "password": "dAni1!admin",
+        "email": "admin1@fake.com",
+        "full_name": "Иванов Иван Иванович",
+        "address": "Москва, ул. Ленина, д. 1"
+    },
+    {
+        "username": "admin2",
+        "password": "dAni1!admin",
+        "email": "admin2@fake.com",
+        "full_name": "Петров Петр Федорович",
+        "address": "Санкт-Петербург, Невский пр., д. 10"
+    },
+    {
+        "username": "admin3",
+        "password": "dAni1!admin",
+        "email": "admin3@fake.com",
+        "full_name": "Светлова Светлана Олеговна",
+        "address": "Новосибирск, ул. Гагарина, д. 25"
+    }
+]
