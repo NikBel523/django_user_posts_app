@@ -33,7 +33,9 @@
         <tbody>
             {% for user in users %}
             <tr>
-                <td>{{ user.full_name }}</td>
+                <td>
+                    <a href="{% url 'users:user_update' user.id %}">{{ user.full_name }}</a>
+                </td>
                 <td>{{ user.email }}</td>
             </tr>
             {% endfor %}

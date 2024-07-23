@@ -1,7 +1,9 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import DetailView, ListView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, UpdateView
 
+from users.forms import UserForm
 from users.models import MetroUser
 
 User = get_user_model()
@@ -13,6 +15,16 @@ class MetroUserView(ListView):
     model = MetroUser
     template_name = 'users.html'
     context_object_name = 'users'
+
+
+class UserUpdateView(UpdateView):
+    """Представление для изменения информации о пользователе."""
+
+    model = User
+    form_class = UserForm
+    template_name = 'user_update_form.html'
+    pk_url_kwarg = 'user_id'
+    success_url = reverse_lazy('user_list')
 
 
 def user_home(request):
